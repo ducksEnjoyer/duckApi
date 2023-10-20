@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 8000
 app.get("/",(request,response)=>{
     response.sendFile(__dirname + "/index.html")
 })
-app.use("/api",apiRouter) /
-app.listen(PORT,()=>{  //doesnt work i mean i cant go on /api hmm
+app.use("/api",apiRouter) 
+app.listen(PORT,()=>{  
      
     console.log(`Server started on http://localhost:${PORT}`)
 })

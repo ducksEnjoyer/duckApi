@@ -1,3 +1,4 @@
+const {resolve} = require("path");
 const ducksWithStrengths = [
   {
     name: "Mallard Duck",
@@ -5,6 +6,7 @@ const ducksWithStrengths = [
     color: "Mottled brown with iridescent green head",
     habitat: "Ponds, lakes, and rivers",
     diet: "Omnivorous",
+    img : resolve("./img/ducka.jpg"),
     strength: 8, // On a scale from 1 to 10
   },
   {
@@ -13,6 +15,7 @@ const ducksWithStrengths = [
     color: "Colorful with iridescent green, blue, and purple",
     habitat: "Wooded wetlands and swamps",
     diet: "Omnivorous",
+    img : resolve("./img/ducka.jpg"),
     strength: 7, // On a scale from 1 to 10
   },
   {
@@ -21,6 +24,7 @@ const ducksWithStrengths = [
     color: "White with orange bill and legs",
     habitat: "Domesticated, often on farms",
     diet: "Omnivorous",
+    img : resolve("./img/ducka.jpg"),
     strength: 5, // On a scale from 1 to 10
   },
   {
@@ -29,6 +33,7 @@ const ducksWithStrengths = [
     color: "Long neck, slender with brown and white plumage",
     habitat: "Wetlands and marshes",
     diet: "Mainly herbivorous",
+    img : resolve("./img/ducka.jpg"),
     strength: 6, // On a scale from 1 to 10
   },
   {
@@ -37,9 +42,11 @@ const ducksWithStrengths = [
     color: "Exotic, with colorful patterns",
     habitat: "East Asian forests and wetlands",
     diet: "Omnivorous",
+    img : resolve("./img/ducka.jpg"),
     strength: 9, // On a scale from 1 to 10
   },
 ];
+
 const allDucks = (req, res) => {
     res.json(ducksWithStrengths)
 } 
