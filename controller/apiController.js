@@ -1,13 +1,15 @@
-const {resolve} = require("path");
-const ducksWithStrengths = [
-  {
-    name: "Mallard Duck",
+const path = require("path");
+const resolve = path.resolve
+const host = "https://qwacky.onrender.com";
+const ducksWithStrengths = [ 
+  {  name: "Mallard Duck", 
     species: "Anas platyrhynchos",
     color: "Mottled brown with iridescent green head",
     habitat: "Ponds, lakes, and rivers",
     diet: "Omnivorous",
-    img : resolve("./img/ducka.jpg"),
-    strength: 8, // On a scale from 1 to 10
+    img : host + "/img/qwack.webp",
+    strength: 8,    
+   
   },
   {
     name: "Wood Duck",
@@ -15,8 +17,8 @@ const ducksWithStrengths = [
     color: "Colorful with iridescent green, blue, and purple",
     habitat: "Wooded wetlands and swamps",
     diet: "Omnivorous",
-    img : resolve("./img/ducka.jpg"),
-    strength: 7, // On a scale from 1 to 10
+    img : host + "/img/ducka.jpg",
+    strength: 7, 
   },
   {
     name: "Pekin Duck",
@@ -24,8 +26,8 @@ const ducksWithStrengths = [
     color: "White with orange bill and legs",
     habitat: "Domesticated, often on farms",
     diet: "Omnivorous",
-    img : resolve("./img/ducka.jpg"),
-    strength: 5, // On a scale from 1 to 10
+    img : host + "/img/ducko.jpg",
+    strength: 5, 
   },
   {
     name: "Northern Pintail",
@@ -33,8 +35,8 @@ const ducksWithStrengths = [
     color: "Long neck, slender with brown and white plumage",
     habitat: "Wetlands and marshes",
     diet: "Mainly herbivorous",
-    img : resolve("./img/ducka.jpg"),
-    strength: 6, // On a scale from 1 to 10
+    img : host + "/img/ducky.jpg",
+    strength: 6, 
   },
   {
     name: "Mandarin Duck",
@@ -42,10 +44,11 @@ const ducksWithStrengths = [
     color: "Exotic, with colorful patterns",
     habitat: "East Asian forests and wetlands",
     diet: "Omnivorous",
-    img : resolve("./img/ducka.jpg"),
-    strength: 9, // On a scale from 1 to 10
+    img : host + "/img/ducku.jpg",
+    strength: 9, 
   },
 ];
+
 
 const allDucks = (req, res) => {
     res.json(ducksWithStrengths)
